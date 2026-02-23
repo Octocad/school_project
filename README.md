@@ -2,6 +2,16 @@
 
 Sistema inteligente para auxiliar professores na criação automatizada de provas personalizadas utilizando Inteligência Artificial.
 
+.
+---
+
+## Link  dos Vídeos
+
+MVP Explicado -> [clique aqui]()
+
+Pitch -> [clique aqui]()
+
+.
 ---
 
 ## 📋 Resumo Executivo
@@ -14,6 +24,7 @@ O **School Project** é uma plataforma web full-stack que automatiza a geração
 - Banco de dados centralizado de avaliações
 - Exportação profissional em PDF
 
+.
 ---
 
 ## 🎯 Problema Identificado
@@ -34,6 +45,8 @@ Automatizar a criação de provas com IA permite que professores:
 3. Mantenham histórico organizado de provas aplicadas
 4. Gerem materiais com qualidade profissional constante
 
+
+.
 ---
 
 ## 💡 Descrição da Solução
@@ -64,6 +77,8 @@ O sistema oferece três funcionalidades principais:
 Login → Gerar Prova → IA Processa → Revisar Questões → Salvar → Exportar PDF
 ```
 
+
+.
 ---
 
 ## 🛠️ Processo de Desenvolvimento
@@ -93,6 +108,8 @@ Login → Gerar Prova → IA Processa → Revisar Questões → Salvar → Expor
 - Correção de bugs de networking Docker
 - Otimização de performance
 
+
+.
 ---
 
 ## 🔧 Detalhes Técnicos
@@ -117,6 +134,7 @@ Login → Gerar Prova → IA Processa → Revisar Questões → Salvar → Expor
 - **Docker Networking** - Comunicação entre serviços
 - **Volume Persistence** - Dados permanentes (MongoDB + Ollama)
 
+.
 ### Arquitetura do Sistema
 
 ```
@@ -225,6 +243,7 @@ school_project/
 └── docker-compose.yaml            # Orquestração de serviços
 ```
 
+.
 ### Endpoints da API
 
 | Método | Endpoint | Descrição |
@@ -236,6 +255,7 @@ school_project/
 | GET | `/exams/{id}/download-pdf` | Download PDF da prova |
 | POST | `/auth/login` | Autenticação de usuário |
 
+.
 ### Modelo de Dados (MongoDB)
 
 ```json
@@ -256,6 +276,8 @@ school_project/
 }
 ```
 
+
+.
 ---
 
 ## 🚀 Como Executar
@@ -297,6 +319,7 @@ O Ollama baixará o Mistral (~4GB) automaticamente.
 - **Email:** professorTeste
 - **Senha:** (qualquer valor)
 
+.
 ---
 
 ## 🔗 Links Úteis
@@ -311,6 +334,7 @@ O Ollama baixará o Mistral (~4GB) automaticamente.
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [React Documentation](https://react.dev/)
 
+.
 ---
 
 ## 📚 Aprendizados e Próximos Passos
@@ -340,6 +364,7 @@ O Ollama baixará o Mistral (~4GB) automaticamente.
 - Sem sistema de múltiplos usuários (apenas mock)
 - Sem personalização manual de provas antes de salvar o PDF
 
+.
 ### Roadmap Futuro
 
 **Curto Prazo**
@@ -364,18 +389,21 @@ O Ollama baixará o Mistral (~4GB) automaticamente.
 - [ ] Marketplace de provas prontas
 - [ ] Suporte multi-idioma
 
+.
 ---
 
 ## 👥 Equipe
 
 - **Desenvolvedor Full-Stack:** [Cadu Santana]
 
+.
 ---
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+.
 ---
 
 ## 📞 Contato
