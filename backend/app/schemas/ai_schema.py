@@ -5,3 +5,4 @@ class AIGenerateRequest(BaseModel):
     grade: str
     topic: str
     difficulty: str = "medium"
+    num_questions: int = 5

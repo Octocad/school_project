@@ -5,6 +5,7 @@ export async function generateExam(data: {
   grade: string
   topic: string
   difficulty: string
+  num_questions?: number
 }) {
   const res = await api.post("/ai/generate", data)
   // Garante que sempre retorna {questions: []}
@@ -26,4 +27,23 @@ export async function getExams() {
 export async function getRepository() {
   const res = await api.get("/repository")
   return res.data
+}
+export async function downloadExamPDF(examId: string, examTitle: string) {
+  try {
+    const res = await api.get(`/exams/${examId}/download-pdf`, {
+      responseType: "blob"
+    })
+    
+    // Create a blob URL and trigger download
+    const url = window.URL.createObjectURL(new Blob([res.data]))
+    const link = document.createElement("a")
+    link.href = url
+    link.setAttribute("download", `prova_${examTitle}.pdf`)
+    document.body.appendChild(link)
+    link.click()
+    link.parentNode?.removeChild(link)
+    window.URL.revokeObjectURL(url)
+  } catch (error) {
+    console.error("Error downloading PDF:", error)
+  }
 }

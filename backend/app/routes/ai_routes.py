@@ -6,5 +6,5 @@ router = APIRouter(prefix="/ai", tags=["AI"])
 
 @router.post("/generate")
 def generate_exam(req: AIGenerateRequest):
-    questions = generate_questions(req.subject, req.grade, req.topic, req.difficulty)
+    questions = generate_questions(req.subject, req.grade, req.topic, req.difficulty, req.num_questions)   
     return {"questions": questions}

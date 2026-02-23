@@ -1,7 +1,12 @@
 from app.core.database import db
+from bson.objectid import ObjectId
 
 def save_material(material):
-    return db.repository.insert_one(material).inserted_id
+    return db.exams.insert_one(material).inserted_id
 
 def list_materials():
-    return list(db.repository.find({}, {"_id": 0}))
+    exams = []
+    for exam in db.exams.find({}):
+        exam["_id"] = str(exam["_id"])  # Convert ObjectId to string
+        exams.append(exam)
+    return exams

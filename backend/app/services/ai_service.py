@@ -6,11 +6,11 @@ from app.core.config import settings
 OLLAMA_API_URL = os.getenv("OLLAMA_HOST", "http://localhost:11434") + "/api/generate"
 OLLAMA_MODEL = "mistral"
 
-def generate_questions(subject, grade, topic, difficulty):
+def generate_questions(subject, grade, topic, difficulty, num_questions=5):
     prompt = f"""Você é um gerador de questões escolares. Retorne EXATAMENTE um JSON (nada mais, nada menos).
 
 Procure no seu repertório de conhecimento sobre {subject} e
-Gere 5 questões de múltipla escolha em relação a: {topic}
+Gere {num_questions} questões de múltipla escolha em relação a: {topic}
 Série: {grade}
 Dificuldade: {difficulty}
 
