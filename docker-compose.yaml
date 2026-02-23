@@ -6,8 +6,48 @@ services:
       - "8000:8000"
     env_file:
       - backend/.env
+    depends_on:
+      - mongo
+      - ollama
+    networks:
+      - school-network
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+
+  frontend:
+    build: ./frontend/vite-project
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    networks:
+      - school-network
+    environment:
+      - VITE_API_URL=http://api:8000
 
   mongo:
     image: mongo:8
     ports:
       - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - school-network
+
+  ollama:
+    build: ./ollama
+    ports:
+      - "11435:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - school-network
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+
+volumes:
+  mongo-data:
+  ollama-data:
+
+networks:
+  school-network:

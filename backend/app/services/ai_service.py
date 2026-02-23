@@ -1,8 +1,9 @@
 import requests
 import json
+import os
 from app.core.config import settings
 
-OLLAMA_API_URL = "http://localhost:11434/api/generate"
+OLLAMA_API_URL = os.getenv("OLLAMA_HOST", "http://localhost:11434") + "/api/generate"
 OLLAMA_MODEL = "mistral"
 
 def generate_questions(subject, grade, topic, difficulty):
