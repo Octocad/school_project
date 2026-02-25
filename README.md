@@ -45,6 +45,25 @@ Automatizar a criação de provas com IA permite que professores:
 3. Mantenham histórico organizado de provas aplicadas
 4. Gerem materiais com qualidade profissional constante
 
+.
+---
+
+## Imagens das Telas da Aplicação
+
+### Tela de Login
+![Screenshot](docs/images/telaLogin.png)
+
+### Tela Home
+![Screenshot](docs/images/telaHome.png)
+
+### Tela de Geração de Prova
+![Screenshot](docs/images/telaGeraExam.png)
+
+### Tela do Repositório de Provas
+![Screenshot](docs/images/telaRepo.png)
+
+### Tela de PDF gerado
+![Screenshot](docs/images/telaPDF.png)
 
 .
 ---
