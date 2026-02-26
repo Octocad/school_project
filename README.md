@@ -9,7 +9,7 @@ Sistema inteligente para auxiliar professores na criação automatizada de prova
 
 MVP Explicado -> [clique aqui](https://youtu.be/pa9ZATgo0Cc)
 
-Pitch -> [clique aqui]()
+Pitch -> [clique aqui](https://youtu.be/OtH7mm9-xOo)
 
 .
 ---
